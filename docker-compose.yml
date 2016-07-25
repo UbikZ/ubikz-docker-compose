@@ -8,6 +8,7 @@ nginx:
         - "443:443"
     volumes:
         - /srv/docker/nginx:/var/log/nginx
+    env_file: .nginx.env
 stream-scraper:
     image: ubikz/stream-scraper
     links:
